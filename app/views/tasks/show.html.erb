@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="d-flex justify-content-between">
+    <h1 class="my-3"><%= @task.title %></h1>
+    <%= link_to "Edit task", edit_task_path %>
+  </div>
+  <div class="w-50" id="details-box">
+    <p class="p-4"> <%= @task.details %> </p>
+  </div>
+  <div id="show-check-underline">
+    <div class="d-flex">
+      <% if @task.completed %>
+        <i class="far fa-check-square">  </i> <p>This is completed</p>
+      <% else %>
+        <i class="far fa-square"></i> <p>This task is not completed yet!</p>
+      <% end %>
+    </div>
+  </div>
+  <br>
+  <%= link_to "Back to list", tasks_path %>
+
+</div>

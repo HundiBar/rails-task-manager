@@ -1,0 +1,12 @@
+<div class="m-3">
+  <%= simple_form_for(@task) do |f| %>
+    <%= f.input :title %>
+    <%= f.input :details %>
+    <%= f.submit %>
+  <% end %>
+  <div id="line-break"></div>
+  <%= link_to "Back to list", tasks_path %>
+
+</div>
+
+
