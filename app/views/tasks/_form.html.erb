@@ -1,0 +1,6 @@
+<%= simple_form_for(task) do |f| %>
+    <%= f.input :title %>
+    <%= f.input :details %>
+    <%= f.input :completed, input_html: { checked: @task.completed } if task.id %>
+    <%= f.button :submit, class: "btn btn-primary my-3" %>
+  <% end %>

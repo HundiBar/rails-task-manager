@@ -1,12 +1,9 @@
-<div class="m-3">
-  <%= simple_form_for(@task) do |f| %>
-    <%= f.input :title %>
-    <%= f.input :details %>
-    <%= f.submit %>
-  <% end %>
+<div class="m-3 w-50">
+  <h1> Make a new task</h1>
+  <%= render "form", task: @task %>
   <div id="line-break"></div>
-  <%= link_to "Back to list", tasks_path %>
-
+  <br>
+  <%= link_to "Back to list", tasks_path, class: "btn btn-light" %>
 </div>
 
 

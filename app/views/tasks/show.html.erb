@@ -1,7 +1,7 @@
 <div class="container">
-  <div class="d-flex justify-content-between">
+  <div class="d-flex justify-content-between align-items-center">
     <h1 class="my-3"><%= @task.title %></h1>
-    <%= link_to "Edit task", edit_task_path %>
+    <%= link_to "Edit task", edit_task_path, class: "btn btn-primary" %>
   </div>
   <div class="w-50" id="details-box">
     <p class="p-4"> <%= @task.details %> </p>
@@ -16,6 +16,6 @@
     </div>
   </div>
   <br>
-  <%= link_to "Back to list", tasks_path %>
+  <%= link_to "Back to list", tasks_path, class: "btn btn-light" %>
 
 </div>

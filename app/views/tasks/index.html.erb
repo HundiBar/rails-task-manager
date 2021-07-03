@@ -4,17 +4,22 @@
     <ul>
       <% @tasks.each do |task| %>
         <div class="d-flex">
-          <li><i class="far fa<%= "-check" if task.completed %>-square"></i><%= link_to task.title, task_path(task) %> <%= link_to "Delete",
-            task_path(task),
+          <li><i class="far fa<%= "-check" if task.completed %>-square"></i>
+            <%= link_to task.title, task_path(task)%>
+             <%= link_to task_path(task),
             method: :delete,
-            data: { confirm: "Are you sure?" } %></li>
+            data: { confirm: "Are you sure?" } do %>
+                <i class="fas fa-trash"></i>
+              <% end %>
+          </li>
         </div>
 
       <% end %>
     </ul>
     <div id="line-break"></div>
+    <br>
     <div>
-      <%= link_to "Add a new task", new_task_path %>
+      <%= link_to "Add a new task", new_task_path, class: "btn btn-primary" %>
     </div>
   </div>
 </div>
